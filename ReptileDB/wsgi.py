@@ -1,5 +1,5 @@
 """
-WSGI config for ReptileDB project.
+WSGI config for reptile_django project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -9,14 +9,8 @@ https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/
 
 import os
 
-import django.core.handlers.wsgi
-
-if path not in sys.path:
-    sys.path.append(path)
-
 from django.core.wsgi import get_wsgi_application
-from django.contrib.staticfiles.handlers import StaticFilesHandler
-application = StaticFilesHandler(get_wsgi_application())
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "ReptileDB.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "reptile_django.settings")
 
+application = get_wsgi_application()
